@@ -6,6 +6,7 @@ body {
 
 h1 {
   font-family: 'Shrikhand', cursive;
+  font-size: 1.8em;
   text-align: center;
   margin: 0;
   padding: 15px 0 5px;
@@ -90,6 +91,11 @@ header {
   text-align: center;
 }
 
+.working__step__number span {
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+
 .working__step i {
   padding-right: 10px;
 }
@@ -99,13 +105,117 @@ header {
   padding: 50px 20px;
 }
 
+.restaurant h3, .restaurant p {
+  margin: 0;
+}
+
+.restaurant h3 {
+  font-size: 1.1em;
+}
+
 .restaurant__card {
-  display: relative;
+  position: relative;
+  background-color: white;
+  border-radius: 15px;
+  margin: 20px auto;
+}
+
+.restaurant__card__tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  color: #008766;
+  background-color: #99e2d0;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.restaurant__card__image {
+  height: 150px;
+}
+
+.restaurant__card__image img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .restaurant__card__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 12px;
+}
+
+.restaurant__card__description p {
+  padding: 3px 0;
+}
+
+.restaurant__card__description div:last-child {
+  font-size: 1.5em;
+  font-weight: 100;
+  padding: 10px;
+}
+
+.restaurant__card__description div:last-child .las.la-heart {
+  color: #9356DC;
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 5px 20px 20px;
+}
+
+footer h4 {
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 1px;
+  margin: 15px 0;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+footer p i {
+  padding-right: 5px;
+}
+
+.menu header {
+  position: relative;
+  margin-bottom: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu header .la-arrow-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.8em;
+}
+
+.menu__container {
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  position: relative;
+  top: -50px;
+  padding: 40px 20px;
+}
+
+.menu__container__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */
