@@ -188,34 +188,90 @@ footer p i {
   padding-right: 5px;
 }
 
-.menu header {
+.menu_page header {
   position: relative;
   margin-bottom: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.menu header .la-arrow-left {
+.menu_page header .la-arrow-left {
   position: absolute;
   top: 20px;
   left: 20px;
   font-size: 1.8em;
 }
 
-.menu__container {
+.menu_page main {
   background-color: #f6f6f6;
-  border-radius: 40px;
-  position: relative;
-  top: -50px;
-  padding: 40px 20px;
 }
 
-.menu__container__header {
+.menu_page .menu {
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  top: -50px;
+  padding: 35px 20px;
+}
+
+.menu_page .menu__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.menu_page .menu__header h2 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.menu_page .menu__header h2::first-letter {
+  text-transform: capitalize;
+}
+
+.menu_page .menu__header .la-heart {
+  font-size: 1.8em;
+  padding-right: 10px;
+}
+
+.menu_page .menu__part {
+  margin: 20px auto;
+}
+
+.menu_page .menu__part h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.menu_page .menu__part__item {
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px auto;
+}
+
+.menu_page .menu__part__item p, .menu_page .menu__part__item h4 {
+  margin: 0;
+}
+
+.menu_page .menu__part__item__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu_page .menu__btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  margin: 20px auto;
+  padding: 15px 50px;
 }
 /*# sourceMappingURL=main.css.map */
