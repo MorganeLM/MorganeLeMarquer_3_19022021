@@ -18,7 +18,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: initial;
+  color: inherit;
 }
 
 img {
@@ -58,9 +58,16 @@ header {
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 20px;
-  padding: 10px 15px;
-  margin: 20px auto;
+  border-radius: 30px;
+  padding: 17px 22px;
+  margin: 30px auto;
+  -webkit-box-shadow: 3px 5px 10px #adadad;
+          box-shadow: 3px 5px 10px #adadad;
+}
+
+.site-hook_btn:hover, .menu__btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 .working {
@@ -266,6 +273,7 @@ footer p i {
   display: flex;
   -webkit-box-shadow: 0 0 4px lightgrey;
           box-shadow: 0 0 4px lightgrey;
+  overflow: hidden;
 }
 
 .menu_page .menu__part__item p, .menu_page .menu__part__item h4 {
@@ -279,6 +287,19 @@ footer p i {
   padding: 10px 20px 10px 10px;
 }
 
+.menu_page .menu__part__item:hover .menu__part__item__check {
+  right: 0;
+}
+
+.menu_page .menu__part__item:hover .menu__part__item__check .la-check {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.menu_page .menu__part__item:hover .menu__part__item__description p:last-of-type {
+  right: 0;
+}
+
 .menu_page .menu__part__item__description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,23 +307,31 @@ footer p i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+}
+
+.menu_page .menu__part__item__description p:last-of-type {
+  position: relative;
+  right: -40px;
+  -webkit-transition: right 500ms;
+  transition: right 500ms;
 }
 
 .menu_page .menu__part__item__check {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  position: relative;
+  right: -70px;
   background-color: #99e2d0;
-  padding: 10px;
+  padding: 15px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: right 500ms;
+  transition: right 500ms;
 }
 
 .menu_page .menu__part__item__check .la-check {
@@ -311,6 +340,10 @@ footer p i {
   color: #99e2d0;
   padding: 4px;
   border-radius: 50%;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
 }
 
 .menu_page .menu__btn {

@@ -27,7 +27,7 @@ h2{
 
 a{
     text-decoration: none;
-    color: initial;
+    color: inherit;
 }
 
 img{
@@ -62,11 +62,16 @@ header{
         width: fit-content;
         color: white;
         background: linear-gradient($secondary, $primary);
-        border-radius: 20px;
-        padding: 10px 15px;
-        margin: 20px auto;
+        border-radius: 30px;
+        padding: 17px 22px;
+        margin: 30px auto;
+        box-shadow: 3px 5px 10px rgb(173, 173, 173);
     }
 }
+
+a.site-hook__btn:hover{
+    color: yellowgreen;
+    box-shadow: 3px 5px 10px rgb(136, 136, 136);
 
 // == Working block
 .working{
@@ -231,6 +236,7 @@ footer{
                 margin: 15px auto;
                 display: flex;
                 box-shadow: 0 0 4px lightgrey;
+                overflow: hidden;
                 p, h4{
                     margin: 0;
                 }
@@ -238,25 +244,46 @@ footer{
                     flex: 6;
                     padding: 10px 20px 10px 10px;
                 }
+                &:hover{
+                    .menu__part__item__check{
+                        right: 0;
+                        .la-check{
+                            transform: rotate(360deg);
+                        }
+                    }
+                    .menu__part__item__description p:last-of-type{
+                        right: 0;
+                    }
+                  
+
+                }
                 &__description{
                     display: flex;
                     justify-content: space-between;
+                    width: 100%;
+                    p:last-of-type{
+                        position: relative;
+                        right: -40px;
+                        transition: right 500ms;
+                    }
                 }
                 &__check{
-                    flex: 1;
+                    position: relative;
+                    right: -70px;
                     background-color: #99e2d0;
-                    padding: 10px;
+                    padding: 15px;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
-                    display: none;
                     justify-content: center;
                     align-items: center;
+                    transition: right 500ms;
                     .la-check{
                         display: block;
                         background-color: white;
                         color: #99e2d0;
                         padding: 4px;
                         border-radius: 50%;
+                        transition: transform 500ms;
                     }
                 }
             }
