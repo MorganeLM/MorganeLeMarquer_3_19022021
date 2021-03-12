@@ -65,9 +65,11 @@ header {
           box-shadow: 3px 5px 10px #adadad;
 }
 
-.site-hook_btn:hover, .menu__btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+a.site-hook__btn:hover, a.menu__btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff46cc), to(#782cd3));
+  background: linear-gradient(#ff46cc, #782cd3);
+  -webkit-box-shadow: 3px 5px 10px #888888;
+          box-shadow: 3px 5px 10px #888888;
 }
 
 .working {
@@ -357,5 +359,7 @@ footer p i {
   border-radius: 30px;
   margin: 20px auto;
   padding: 15px 50px;
+  -webkit-box-shadow: 3px 5px 10px #adadad;
+          box-shadow: 3px 5px 10px #adadad;
 }
 /*# sourceMappingURL=main.css.map */
