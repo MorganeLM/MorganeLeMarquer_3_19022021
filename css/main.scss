@@ -151,9 +151,20 @@ a.site-hook__btn:hover, a.menu__btn:hover{
                 font-size: 1.5em;
                 font-weight: 100;
                 padding: 10px;
-                .las.la-heart{
-                    color: $primary;
-                }              
+                .fas.fa-heart{
+                    padding: 2px;
+                    -webkit-text-stroke: 1px black;
+                    color: white;
+                    transition: all 2s;
+                    &:hover{
+                        -webkit-text-stroke: 1px transparent;
+                        background: linear-gradient($secondary, $primary); 
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        
+                    }
+                }     
+                       
             }
         }
     }
@@ -185,11 +196,12 @@ footer{
         position: relative;
         margin-bottom: 0;
         box-shadow: none;
-        .la-arrow-left{
+        .fa-arrow-left{
             position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 1.8em;
+            top: 23px;
+            left: 25px;
+            font-size: 1.4em;
+            color: #353535;
         }
     }
     main{
@@ -211,9 +223,12 @@ footer{
                     text-transform: capitalize;
                 }
             }
-            .la-heart{
-                font-size: 1.8em;
-                padding-right: 10px;
+            .fa-heart{
+                font-size: 1.6em;
+                padding-right: 20px;
+                -webkit-text-stroke: 1px black;
+                color: white;
+
             }
         }
         &__part{
@@ -244,25 +259,28 @@ footer{
                 }
                 >div:first-of-type{
                     flex: 6;
-                    padding: 10px 20px 10px 10px;
+                    padding: 10px 15px 10px 10px;
                 }
                 &:hover{
                     .menu__part__item__check{
                         right: 0;
-                        .la-check{
+                        .fa-check-circle{
                             transform: rotate(360deg);
                         }
                     }
                     .menu__part__item__description p:last-of-type{
                         right: 0;
                     }
-                  
-
                 }
                 &__description{
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
+                    p:first-of-type{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
                     p:last-of-type{
                         position: relative;
                         right: -40px;
@@ -279,12 +297,11 @@ footer{
                     justify-content: center;
                     align-items: center;
                     transition: right 500ms;
-                    .la-check{
+                    .fa-check-circle{
                         display: block;
-                        background-color: white;
-                        color: #99e2d0;
+                        color: white;
+                        font-size: 1.4em;
                         padding: 4px;
-                        border-radius: 50%;
                         transition: transform 500ms;
                     }
                 }

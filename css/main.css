@@ -171,8 +171,20 @@ a.site-hook__btn:hover, a.menu__btn:hover {
   padding: 10px;
 }
 
-.restaurant__card__description div:last-child .las.la-heart {
-  color: #9356DC;
+.restaurant__card__description div:last-child .fas.fa-heart {
+  padding: 2px;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.restaurant__card__description div:last-child .fas.fa-heart:hover {
+  -webkit-text-stroke: 1px transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 footer {
@@ -204,11 +216,12 @@ footer p i {
           box-shadow: none;
 }
 
-.menu_page header .la-arrow-left {
+.menu_page header .fa-arrow-left {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 1.8em;
+  top: 23px;
+  left: 25px;
+  font-size: 1.4em;
+  color: #353535;
 }
 
 .menu_page main {
@@ -241,9 +254,11 @@ footer p i {
   text-transform: capitalize;
 }
 
-.menu_page .menu__header .la-heart {
-  font-size: 1.8em;
-  padding-right: 10px;
+.menu_page .menu__header .fa-heart {
+  font-size: 1.6em;
+  padding-right: 20px;
+  -webkit-text-stroke: 1px black;
+  color: white;
 }
 
 .menu_page .menu__part {
@@ -286,14 +301,14 @@ footer p i {
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
-  padding: 10px 20px 10px 10px;
+  padding: 10px 15px 10px 10px;
 }
 
 .menu_page .menu__part__item:hover .menu__part__item__check {
   right: 0;
 }
 
-.menu_page .menu__part__item:hover .menu__part__item__check .la-check {
+.menu_page .menu__part__item:hover .menu__part__item__check .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -310,6 +325,12 @@ footer p i {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+}
+
+.menu_page .menu__part__item__description p:first-of-type {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu_page .menu__part__item__description p:last-of-type {
@@ -336,12 +357,11 @@ footer p i {
   transition: right 500ms;
 }
 
-.menu_page .menu__part__item__check .la-check {
+.menu_page .menu__part__item__check .fa-check-circle {
   display: block;
-  background-color: white;
-  color: #99e2d0;
+  color: white;
+  font-size: 1.4em;
   padding: 4px;
-  border-radius: 50%;
   -webkit-transition: -webkit-transform 500ms;
   transition: -webkit-transform 500ms;
   transition: transform 500ms;
