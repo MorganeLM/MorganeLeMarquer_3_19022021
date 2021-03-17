@@ -36,6 +36,80 @@ img{
     object-fit: cover;
 }
 
+@keyframes appearGradually { 
+    from { 
+        position: relative;
+        left: 400px;
+        //opacity: 0; 
+    } 
+    to { 
+        position: relative;
+        left: 0;
+        //opacity: 1; 
+    }  
+}
+
+#first-item{
+    animation-delay: 1s;
+}
+
+#second-item{
+    animation-delay: 2s;
+}
+
+#third-item{
+    animation-delay: 3s;
+}
+
+#fourth-item{
+    animation-delay: 4s;
+}
+
+#fifth-item{
+    animation-delay: 5s;
+}
+
+#sixth-item{
+    animation-delay: 6s;
+}
+
+#seventh-item{
+    animation-delay: 7s;
+}
+
+#eith-item{
+    animation-delay: 8s;
+}
+
+#nineth-item{
+    animation-delay: 9s;
+}
+
+@keyframes appearGraduallyPart { 
+    from { 
+        position: relative;
+        left: 400px;
+        opacity: 0; 
+    } 
+    to { 
+        position: relative;
+        left: 0;
+        opacity: 1; 
+    }  
+}
+
+#part1{
+    animation-delay: 1s;
+}
+
+#part2{
+    animation-delay: 2s;
+}
+
+#part3{
+    animation-delay: 3s;
+}
+
 // == header
 header{
     margin-bottom: 3px;
@@ -214,6 +288,7 @@ footer{
         position: relative;
         top: -50px;
         padding: 35px 20px;
+        overflow: hidden;
         &__header{
             display: flex;
             justify-content: space-between;
@@ -233,6 +308,9 @@ footer{
         }
         &__part{
             margin: 20px auto;
+            animation: 1s linear appearGraduallyPart forwards;
+            position: relative;
+            left: 400px;
             h3{
                 font-weight: 100;
                 text-transform: uppercase;
@@ -254,6 +332,10 @@ footer{
                 display: flex;
                 box-shadow: 0 0 4px lightgrey;
                 overflow: hidden;
+                //animation: 1s linear appearGradually forwards;
+                //animation-delay: attr(data-time);
+                //position: relative;
+                //left: 400px;
                 p, h4{
                     margin: 0;
                 }
@@ -319,3 +401,4 @@ footer{
         }
     }
 }
+

@@ -28,6 +28,114 @@ img {
      object-fit: cover;
 }
 
+@-webkit-keyframes appearGradually {
+  from {
+    position: relative;
+    left: 400px;
+  }
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes appearGradually {
+  from {
+    position: relative;
+    left: 400px;
+  }
+  to {
+    position: relative;
+    left: 0;
+  }
+}
+
+#first-item {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#second-item {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#third-item {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+#fourth-item {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#fifth-item {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+#sixth-item {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+#seventh-item {
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+#eith-item {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+#nineth-item {
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+@-webkit-keyframes appearGraduallyPart {
+  from {
+    position: relative;
+    left: 400px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes appearGraduallyPart {
+  from {
+    position: relative;
+    left: 400px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+#part1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+#part2 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+#part3 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
 header {
   margin-bottom: 3px;
   -webkit-box-shadow: 0 3px 5px lightgray;
@@ -235,6 +343,7 @@ footer p i {
   position: relative;
   top: -50px;
   padding: 35px 20px;
+  overflow: hidden;
 }
 
 .menu_page .menu__header {
@@ -263,6 +372,10 @@ footer p i {
 
 .menu_page .menu__part {
   margin: 20px auto;
+  -webkit-animation: 1s linear appearGraduallyPart forwards;
+          animation: 1s linear appearGraduallyPart forwards;
+  position: relative;
+  left: 400px;
 }
 
 .menu_page .menu__part h3 {
