@@ -110,6 +110,54 @@ img{
     animation-delay: 3s;
 }
 
+@keyframes spinner{ 
+    0% { 
+        opacity: 1;
+    } 
+    50% { 
+        opacity: 1;
+    }  
+    100% { 
+        opacity: 0;
+    }  
+}
+
+@keyframes spinnerRotation{ 
+    0% { 
+        transform: rotate(0deg);
+    } 
+    25% { 
+        transform: rotate(90deg);
+    }  
+    50% { 
+        transform: rotate(180deg);
+    }  
+    75% { 
+        transform: rotate(270deg);
+    }  
+    100% { 
+        transform: rotate(360deg);
+    }  
+}
+
+// == loader
+.loader{
+    position: absolute;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    color: $primary;
+    animation: 3s linear spinner forwards;
+    >div{
+        position: absolute;
+        left: 45%;
+        top: 30%;
+        font-size: 3em;
+        animation: 3s linear spinnerRotation infinite ;
+    }
+}
+
 // == header
 header{
     margin-bottom: 3px;
