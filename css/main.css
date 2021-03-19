@@ -78,12 +78,12 @@ img {
           animation-delay: 6500ms;
 }
 
-#eith-item {
+#eithth-item {
   -webkit-animation-delay: 7000ms;
           animation-delay: 7000ms;
 }
 
-#nineth-item {
+#ninth-item {
   -webkit-animation-delay: 7500ms;
           animation-delay: 7500ms;
 }
@@ -486,6 +486,7 @@ footer p i {
 .menu_page .menu__part__item {
   background-color: white;
   border-radius: 10px;
+  width: 100%;
   max-width: 335px;
   margin: 15px auto;
   display: -webkit-box;
@@ -499,63 +500,48 @@ footer p i {
           animation: 1s linear appearGradually forwards;
 }
 
-.menu_page .menu__part__item p, .menu_page .menu__part__item h4 {
-  margin: 0;
-}
-
-.menu_page .menu__part__item > div:first-of-type {
-  width: 80%;
+.menu_page .menu__part__item__description {
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
-  padding: 10px 15px 10px 10px;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.menu_page .menu__part__item:hover .menu__part__item__check {
-  right: 0;
-}
-
-.menu_page .menu__part__item:hover .menu__part__item__check .fa-check-circle {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.menu_page .menu__part__item:hover .menu__part__item__description p:first-of-type {
-  width: 80%;
-}
-
-.menu_page .menu__part__item:hover .menu__part__item__description p:last-of-type {
-  right: 0;
-}
-
-.menu_page .menu__part__item__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.menu_page .menu__part__item__description p:first-of-type {
+.menu_page .menu__part__item__description p, .menu_page .menu__part__item__description h4 {
+  margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 100%;
 }
 
-.menu_page .menu__part__item__description p:last-of-type {
-  position: relative;
-  right: -40px;
-  -webkit-transition: right 500ms;
-  transition: right 500ms;
+.menu_page .menu__part__item__price {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0;
+  padding: 10px;
+  padding-right: 20px;
 }
 
 .menu_page .menu__part__item__check {
-  position: relative;
-  right: -70px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: -75px;
   background-color: #99e2d0;
-  padding: 15px;
+  padding: 15px 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   -webkit-box-pack: center;
@@ -564,19 +550,29 @@ footer p i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: right 500ms;
-  transition: right 500ms;
+  -webkit-transition: margin-right 500ms;
+  transition: margin-right 500ms;
 }
 
 .menu_page .menu__part__item__check .fa-check-circle {
   display: block;
   color: white;
+  text-align: center;
   font-size: 1.4em;
   padding: 4px;
   -webkit-transition: -webkit-transform 500ms;
   transition: -webkit-transform 500ms;
   transition: transform 500ms;
   transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.menu_page .menu__part__item:hover .menu__part__item__check {
+  margin-right: 0;
+}
+
+.menu_page .menu__part__item:hover .menu__part__item__check .fa-check-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu_page .menu__btn {
