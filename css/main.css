@@ -122,7 +122,7 @@ img {
     width: 100%;
   }
   99% {
-    opacity: 0.9;
+    opacity: 0.1;
     height: 100vh;
     width: 100%;
   }
@@ -145,7 +145,7 @@ img {
     width: 100%;
   }
   99% {
-    opacity: 0.9;
+    opacity: 0.1;
     height: 100vh;
     width: 100%;
   }
@@ -200,10 +200,6 @@ img {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-.container {
-  z-index: 10;
 }
 
 .loader {
@@ -287,6 +283,7 @@ a.site-hook__btn:hover, a.menu__btn:hover {
   -webkit-box-shadow: 0px 0px 10px lightgrey;
           box-shadow: 0px 0px 10px lightgrey;
   width: 90%;
+  max-width: 335px;
 }
 
 .working__step__number {
@@ -327,6 +324,7 @@ a.site-hook__btn:hover, a.menu__btn:hover {
   background-color: white;
   border-radius: 15px;
   margin: 20px auto;
+  max-width: 335px;
 }
 
 .restaurant__card__tag {
@@ -488,6 +486,7 @@ footer p i {
 .menu_page .menu__part__item {
   background-color: white;
   border-radius: 10px;
+  max-width: 335px;
   margin: 15px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,6 +504,7 @@ footer p i {
 }
 
 .menu_page .menu__part__item > div:first-of-type {
+  width: 80%;
   -webkit-box-flex: 6;
       -ms-flex: 6;
           flex: 6;
@@ -521,7 +521,7 @@ footer p i {
 }
 
 .menu_page .menu__part__item:hover .menu__part__item__description p:first-of-type {
-  width: 90%;
+  width: 80%;
 }
 
 .menu_page .menu__part__item:hover .menu__part__item__description p:last-of-type {
@@ -597,5 +597,45 @@ footer p i {
           animation: 1s linear appearGradually forwards;
   -webkit-animation-delay: 8000ms;
           animation-delay: 8000ms;
+}
+
+/* ---------------------------------------- */
+/* == MEDIAS QUERIES                       */
+/*--------------------------------------- */
+/*  RESPONSIVE TABLET & COMPUTER >950px */
+@media screen and (min-width: 950px) {
+  h2 {
+    text-align: center;
+  }
+  .working > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .working__step {
+    max-width: 235px;
+    margin: 30px;
+  }
+  .restaurant > div {
+    margin: 10px auto;
+    width: 900px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .restaurant__card {
+    width: 400px;
+    max-width: 400px;
+  }
+  .menu__part__item {
+    max-width: 200px;
+  }
+  footer {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
