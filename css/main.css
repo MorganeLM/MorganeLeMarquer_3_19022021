@@ -29,63 +29,63 @@ img {
 }
 
 #entrees {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+#first-item {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+
+#second-item {
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
 }
 
-#first-item {
+#third-item {
+  -webkit-animation-delay: 1250ms;
+          animation-delay: 1250ms;
+}
+
+#plats {
   -webkit-animation-delay: 1500ms;
           animation-delay: 1500ms;
 }
 
-#second-item {
+#fourth-item {
+  -webkit-animation-delay: 1750ms;
+          animation-delay: 1750ms;
+}
+
+#fifth-item {
   -webkit-animation-delay: 2000ms;
           animation-delay: 2000ms;
 }
 
-#third-item {
+#sixth-item {
+  -webkit-animation-delay: 2250ms;
+          animation-delay: 2250ms;
+}
+
+#desserts {
   -webkit-animation-delay: 2500ms;
           animation-delay: 2500ms;
 }
 
-#plats {
-  -webkit-animation-delay: 3500ms;
-          animation-delay: 3500ms;
-}
-
-#fourth-item {
-  -webkit-animation-delay: 4000ms;
-          animation-delay: 4000ms;
-}
-
-#fifth-item {
-  -webkit-animation-delay: 4500ms;
-          animation-delay: 4500ms;
-}
-
-#sixth-item {
-  -webkit-animation-delay: 5000ms;
-          animation-delay: 5000ms;
-}
-
-#desserts {
-  -webkit-animation-delay: 6000ms;
-          animation-delay: 6000ms;
-}
-
 #seventh-item {
-  -webkit-animation-delay: 6500ms;
-          animation-delay: 6500ms;
+  -webkit-animation-delay: 2750ms;
+          animation-delay: 2750ms;
 }
 
 #eithth-item {
-  -webkit-animation-delay: 7000ms;
-          animation-delay: 7000ms;
+  -webkit-animation-delay: 3000ms;
+          animation-delay: 3000ms;
 }
 
 #ninth-item {
-  -webkit-animation-delay: 7500ms;
-          animation-delay: 7500ms;
+  -webkit-animation-delay: 3250ms;
+          animation-delay: 3250ms;
 }
 
 @-webkit-keyframes appearGradually {
@@ -458,6 +458,16 @@ footer p i {
   padding-right: 20px;
   -webkit-text-stroke: 1px black;
   color: white;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.menu_page .menu__header .fa-heart:hover {
+  -webkit-text-stroke: 1px transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .menu_page .menu__part {
@@ -469,8 +479,8 @@ footer p i {
   text-transform: uppercase;
   position: relative;
   opacity: 0;
-  -webkit-animation: 1s linear appearGradually forwards;
-          animation: 1s linear appearGradually forwards;
+  -webkit-animation: 1s ease-in appearGradually forwards;
+          animation: 1s ease-in appearGradually forwards;
 }
 
 .menu_page .menu__part h3::after {
@@ -486,8 +496,7 @@ footer p i {
 .menu_page .menu__part__item {
   background-color: white;
   border-radius: 10px;
-  width: 100%;
-  max-width: 335px;
+  max-width: 500px;
   margin: 15px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,6 +526,11 @@ footer p i {
   width: 100%;
 }
 
+.menu_page .menu__part__item__description p {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
 .menu_page .menu__part__item__price {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -539,9 +553,9 @@ footer p i {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: -75px;
+  margin-right: -20%;
   background-color: #99e2d0;
-  padding: 15px 10px;
+  padding: 12px 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   -webkit-box-pack: center;
@@ -591,15 +605,28 @@ footer p i {
   opacity: 0;
   -webkit-animation: 1s linear appearGradually forwards;
           animation: 1s linear appearGradually forwards;
-  -webkit-animation-delay: 8000ms;
-          animation-delay: 8000ms;
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
 }
 
 /* ---------------------------------------- */
 /* == MEDIAS QUERIES                       */
 /*--------------------------------------- */
+@media screen and (min-width: 700px) {
+  .menu h2 {
+    margin: auto;
+  }
+  .menu h3 {
+    position: relative;
+    left: 12%;
+  }
+}
+
 /*  RESPONSIVE TABLET & COMPUTER >950px */
 @media screen and (min-width: 950px) {
+  .menu_page img {
+    max-height: 300px;
+  }
   h2 {
     text-align: center;
   }
@@ -627,11 +654,27 @@ footer p i {
     width: 400px;
     max-width: 400px;
   }
-  .menu__part__item {
-    max-width: 200px;
-  }
   footer {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .menu {
+    width: 1050px;
+    margin: auto;
+  }
+  .menu__content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .menu h3 {
+    left: 0;
+  }
+  .menu__part__item {
+    width: 330px;
   }
 }
 /*# sourceMappingURL=main.css.map */

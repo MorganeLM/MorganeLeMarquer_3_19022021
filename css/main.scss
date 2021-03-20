@@ -39,40 +39,40 @@ img{
 
 // Délais spécifiques à chaque item pour l'animation "appearGradually"
 #entrees{
-    animation-delay: 1000ms;
+    animation-delay: 500ms;
 }
 #first-item{
-    animation-delay: 1500ms;
+    animation-delay: 750ms;
 }
 #second-item{
-    animation-delay: 2000ms;
+    animation-delay: 1000ms;
 }
 #third-item{
-    animation-delay: 2500ms;
+    animation-delay: 1250ms;
 }
 #plats{
-    animation-delay: 3500ms;
+    animation-delay: 1500ms;
 }
 #fourth-item{
-    animation-delay: 4000ms;
+    animation-delay: 1750ms;
 }
 #fifth-item{
-    animation-delay: 4500ms;
+    animation-delay: 2000ms;
 }
 #sixth-item{
-    animation-delay: 5000ms;
+    animation-delay: 2250ms;
 }
 #desserts{
-    animation-delay: 6000ms;
+    animation-delay: 2500ms;
 }
 #seventh-item{
-    animation-delay: 6500ms;
+    animation-delay: 2750ms;
 }
 #eithth-item{
-    animation-delay: 7000ms;
+    animation-delay: 3000ms;
 }
 #ninth-item{
-    animation-delay: 7500ms;
+    animation-delay: 3250ms;
 }
 
 @keyframes appearGradually { 
@@ -341,7 +341,14 @@ footer{
                 padding-right: 20px;
                 -webkit-text-stroke: 1px black;
                 color: white;
-
+                transition: all 2s;
+                &:hover{
+                    -webkit-text-stroke: 1px transparent;
+                    background: linear-gradient($secondary, $primary); 
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    
+                }
             }
         }
         &__part{
@@ -351,7 +358,7 @@ footer{
                 text-transform: uppercase;
                 position: relative;
                 opacity: 0;
-                animation: 1s linear appearGradually forwards;
+                animation: 1s ease-in appearGradually forwards;
                 &::after{
                     content: "";
                     position: absolute;
@@ -365,8 +372,7 @@ footer{
             &__item{
                 background-color: white;
                 border-radius: 10px;
-                width: 100%;
-                max-width: 335px;
+                max-width: 500px;
                 margin: 15px auto;
                 display: flex;
                 box-shadow: 0 0 4px lightgrey;
@@ -386,6 +392,10 @@ footer{
                         text-overflow: ellipsis;
                         width: 100%;
                     }
+                    p{
+                        font-size: 0.9em;
+                        font-weight: 300;
+                    }
                 }
                 &__price{
                     flex: 1;
@@ -398,9 +408,9 @@ footer{
                 }
                 &__check{
                     flex: 1;
-                    margin-right: -75px;
+                    margin-right: -20%;
                     background-color: #99e2d0;
-                    padding: 15px 10px;
+                    padding: 12px 10px;
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     justify-content: center;
@@ -436,7 +446,7 @@ footer{
             box-shadow: 3px 5px 10px rgb(173, 173, 173);
             opacity: 0;
             animation: 1s linear appearGradually forwards;
-            animation-delay: 8000ms;
+            animation-delay: 3500ms;
         }
     }
 }
@@ -445,8 +455,24 @@ footer{
 /* == MEDIAS QUERIES                       */
 /*--------------------------------------- */
 
+
+@media screen and (min-width: 700px){
+    .menu h2{
+        margin: auto;
+    }
+
+    .menu h3{
+        position: relative;
+        left: 12%;
+    }
+}
+
 /*  RESPONSIVE TABLET & COMPUTER >950px */
 @media screen and (min-width: 950px){
+    .menu_page img{
+        max-height: 300px;
+    }
+
     h2{
         text-align: center;
     }
@@ -473,12 +499,28 @@ footer{
         max-width: 400px;
     }
 
-    .menu__part__item{
-        max-width: 200px;
-    }
-
     footer{
         text-align: center;
     }
 }
 
+@media screen and (min-width: 1050px){
+
+    .menu{
+        width: 1050px;
+        margin: auto;
+    }
+
+    .menu__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .menu h3{
+        left: 0;
+    }
+
+    .menu__part__item{        
+        width: 330px;
+    }
+}
