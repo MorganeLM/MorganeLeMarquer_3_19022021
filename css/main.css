@@ -88,6 +88,16 @@ img {
           animation-delay: 3250ms;
 }
 
+#tenth-item {
+  -webkit-animation-delay: 3500ms;
+          animation-delay: 3500ms;
+}
+
+#eleventh-item {
+  -webkit-animation-delay: 3750ms;
+          animation-delay: 3750ms;
+}
+
 @-webkit-keyframes appearGradually {
   from {
     position: relative;
@@ -424,6 +434,10 @@ footer p i {
 
 .menu_page main {
   background-color: #f6f6f6;
+}
+
+.menu_page main img {
+  max-height: 320px;
 }
 
 .menu_page .menu {

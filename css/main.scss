@@ -74,6 +74,12 @@ img{
 #ninth-item{
     animation-delay: 3250ms;
 }
+#tenth-item{
+    animation-delay: 3500ms;
+}
+#eleventh-item{
+    animation-delay: 3750ms;
+}
 
 @keyframes appearGradually { 
     from { 
@@ -318,6 +324,9 @@ footer{
     }
     main{
         background-color: $lightgrey;
+        img{
+            max-height: 320px;
+        }
     }
     .menu{
         background-color: $lightgrey;
