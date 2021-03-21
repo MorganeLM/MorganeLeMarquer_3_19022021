@@ -239,6 +239,10 @@ a.site-hook__btn:hover, a.menu__btn:hover{
         border-radius: 15px;
         margin: 20px auto;
         max-width: 335px;
+        box-shadow: 2px 2px 5px rgb(179, 179, 179);
+        &:hover{
+            scale: 103%;
+        }
         &__tag{
             position: absolute;
             top: 10px;
