@@ -92,7 +92,7 @@ img{
     }  
 }
 
-@keyframes spinner{ 
+@keyframes spinnerBg{ 
     0% { 
         opacity: 1;
         height: 100vh;
@@ -133,6 +133,24 @@ img{
     }  
 }
 
+@keyframes spinnerBlink{ 
+    0% { 
+        opacity: 0.2;
+    } 
+    40% { 
+        opacity: 0.4;
+    } 
+    50% { 
+        opacity: 1;
+    } 
+    90% { 
+        opacity: 0.4;
+    }   
+    100% { 
+        opacity: 0.2;
+    }  
+}
+
 // == loader
 .loader{
     position: fixed;
@@ -140,15 +158,37 @@ img{
     height: 100vh;
     width: 100%;
     background-color: white;
-    animation: 3s linear spinner forwards;
-    >span{
-        color: $primary;
+    animation: 3s linear spinnerBg forwards;
+    &__bloc{
         position: absolute;
+        width: fit-content;
         left: 50%;
-        top: 30%;
+        top: 40%;
         transform: translateX(-50%);
-        font-size: 3em;
-        animation: 3s linear spinnerRotation forwards;
+        display: flex;
+        background-image: url('/images/animations/plate.png');
+        &__dot{
+            background: linear-gradient($primary, $secondary);
+            opacity: 0.2;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            &.first-dot{
+                margin-right: 10px;
+                animation: 1000ms linear spinnerRotation infinite;
+                animation: 1800ms linear spinnerBlink infinite;
+            }
+            &.second-dot{
+                margin: 0;
+                animation: 3s linear spinnerRotation infinite;
+                animation: 1800ms linear spinnerBlink 600ms infinite;
+            }
+            &.third-dot{
+                margin-left: 10px;
+                animation: 3s linear spinnerRotation infinite;
+                animation: 1800ms linear spinnerBlink 1200ms infinite;
+            }
+        } 
     }
 }
 
