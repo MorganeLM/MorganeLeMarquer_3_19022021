@@ -1,22 +1,43 @@
-// Variables
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$grey: #eaeaea;
-$lightgrey: #f6f6f6;
+/* ----------------------------------------- */
+/*          SUMMARY                         */
+/*---------------------------------------- */
 
-// Mixin
-@mixin gradientBtn{
-    display: block;
-    width: fit-content;
-    color: white;
-    background: linear-gradient($secondary, $primary);
-    border-radius: 30px;
-    box-shadow: 3px 5px 10px rgb(173, 173, 173);
-}
+/*  == GENERAL  */
+/*  == Loader  */
+/*  == Header */
+/*  == Footer */
 
-// Règles
-// == Générales
+/*  == HOMEPAGE     */
+/*  == Location block    */
+/*  == Hook block    */
+/*  == Working block */
+/*  == Restaurant block    */
+
+/*  == MENU PAGES      */
+
+
+/* ---------------------------------------- */
+/* == MEDIAS QUERIES                       */
+/*--------------------------------------- */
+
+/*  RESPONSIVE TABLET >700px */
+/*  RESPONSIVE TABLET & SMALL COMPUTER >950px */
+/*  RESPONSIVE COMPUTER >1050px */
+
+/* ---------------------------------------- */
+/* == COLORS MIXINS & ANIMATIONs                      */
+/*--------------------------------------- */
+@import "_variables_and_mixins.scss";
+@import "_animations.scss";
+
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------- */
+/* == GENERAL                              */
+/*--------------------------------------- */
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -46,122 +67,7 @@ img{
     object-fit: cover;
 }
 
-
-// Délais spécifiques à chaque item pour l'animation "appearGradually"
-#entrees{
-    animation-delay: 500ms;
-}
-#first-item{
-    animation-delay: 750ms;
-}
-#second-item{
-    animation-delay: 1000ms;
-}
-#third-item{
-    animation-delay: 1250ms;
-}
-#plats{
-    animation-delay: 1500ms;
-}
-#fourth-item{
-    animation-delay: 1750ms;
-}
-#fifth-item{
-    animation-delay: 2000ms;
-}
-#sixth-item{
-    animation-delay: 2250ms;
-}
-#desserts{
-    animation-delay: 2500ms;
-}
-#seventh-item{
-    animation-delay: 2750ms;
-}
-#eithth-item{
-    animation-delay: 3000ms;
-}
-#ninth-item{
-    animation-delay: 3250ms;
-}
-#tenth-item{
-    animation-delay: 3500ms;
-}
-#eleventh-item{
-    animation-delay: 3750ms;
-}
-
-@keyframes appearGradually { 
-    from { 
-        position: relative;
-        opacity: 0; 
-    } 
-    to { 
-        position: relative;
-        opacity: 1; 
-    }  
-}
-
-@keyframes spinnerBg{ 
-    0% { 
-        opacity: 1;
-        height: 100vh;
-        width: 100%;
-    } 
-    50% { 
-        opacity: 1;
-        height: 100vh;
-        width: 100%;
-    }  
-    99% { 
-        opacity: 0.1;
-        height: 100vh;
-        width: 100%;
-    }  
-    100% { 
-        opacity: 0;
-        height: 0;
-        width: 0;
-    }  
-}
-
-@keyframes spinnerRotation{ 
-    0% { 
-        transform: rotate(0deg);
-    } 
-    25% { 
-        transform: rotate(90deg);
-    }  
-    50% { 
-        transform: rotate(180deg);
-    }  
-    75% { 
-        transform: rotate(270deg);
-    }  
-    100% { 
-        transform: rotate(360deg);
-    }  
-}
-
-@keyframes spinnerBlink{ 
-    0% { 
-        opacity: 0.2;
-    } 
-    40% { 
-        opacity: 0.4;
-    } 
-    50% { 
-        opacity: 1;
-    } 
-    90% { 
-        opacity: 0.4;
-    }   
-    100% { 
-        opacity: 0.2;
-    }  
-}
-
-// == loader
+/* == Loader  */
 .loader{
     position: fixed;
     z-index: 100;
@@ -202,20 +108,43 @@ img{
     }
 }
 
-// == header
+// == Header
 header{
     margin-bottom: 3px;
     box-shadow: 0 3px 5px lightgray;
 }
 
-// == Location block
+// == Footer
+footer{
+    color: white;
+    background-color: #353535;
+    padding: 5px 20px 20px;
+    h4{
+        font-family: 'Shrikhand', cursive;
+        letter-spacing: 1px;
+        margin: 15px 0;
+    }
+    p{
+        margin: 5px 0;
+        font-size: 0.9em;
+        font-weight: 300;
+        i{
+            padding-right: 5px;
+        }
+    }
+}
+
+/* ---------------------------------------- */
+/* == HOMEPAGE                             */
+/*--------------------------------------- */
+/*  == Location block    */
 .location{
     text-align: center;
     background-color: $grey;
     padding: 15px;
 }
 
-// == Hook block
+/*  == Hook block    */
 .site-hook{
     text-align: center;
     background-color: $lightgrey;
@@ -236,7 +165,7 @@ a.site-hook__btn:hover, a.menu__btn:hover{
 }
     
 
-// == Working block
+/*  == Working block    */
 .working{
     margin: 50px 20px;
     &__step{
@@ -267,7 +196,7 @@ a.site-hook__btn:hover, a.menu__btn:hover{
     }
 }
 
-// == Restaurant block
+/*  == Restaurant block    */
 .restaurant{
     background-color: $lightgrey;
     padding: 50px 20px;
@@ -336,27 +265,9 @@ a.site-hook__btn:hover, a.menu__btn:hover{
     }
 }
 
-// == Footer
-footer{
-    color: white;
-    background-color: #353535;
-    padding: 5px 20px 20px;
-    h4{
-        font-family: 'Shrikhand', cursive;
-        letter-spacing: 1px;
-        margin: 15px 0;
-    }
-    p{
-        margin: 5px 0;
-        font-size: 0.9em;
-        font-weight: 300;
-        i{
-            padding-right: 5px;
-        }
-    }
-}
-
-// == Menu Pages
+/* ---------------------------------------- */
+/* == MENU PAGES                           */
+/*--------------------------------------- */
 .menu_page{
     header{ 
         position: relative;
@@ -436,7 +347,6 @@ footer{
                 overflow: hidden;
                 opacity: 0;
                 animation: 1s linear appearGradually forwards;
-                //animation-delay: attr(data-time);
                 &__description{
                     flex: 6;
                     padding: 10px;
@@ -507,7 +417,7 @@ footer{
 /* == MEDIAS QUERIES                       */
 /*--------------------------------------- */
 
-
+/*  RESPONSIVE TABLET >700px */
 @media screen and (min-width: 700px){
     .menu h2{
         margin: auto;
@@ -519,7 +429,7 @@ footer{
     }
 }
 
-/*  RESPONSIVE TABLET & COMPUTER >950px */
+/*  RESPONSIVE TABLET & SMALL COMPUTER >950px */
 @media screen and (min-width: 950px){
     .menu_page img{
         max-height: 300px;
@@ -556,8 +466,8 @@ footer{
     }
 }
 
+/*  RESPONSIVE COMPUTER >1050px */
 @media screen and (min-width: 1050px){
-
     .menu{
         width: 1050px;
         margin: auto;
