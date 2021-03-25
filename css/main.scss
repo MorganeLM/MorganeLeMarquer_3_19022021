@@ -5,6 +5,16 @@ $tertiary: #99E2D0;
 $grey: #eaeaea;
 $lightgrey: #f6f6f6;
 
+// Mixin
+@mixin gradientBtn{
+    display: block;
+    width: fit-content;
+    color: white;
+    background: linear-gradient($secondary, $primary);
+    border-radius: 30px;
+    box-shadow: 3px 5px 10px rgb(173, 173, 173);
+}
+
 // Règles
 // == Générales
 body{
@@ -214,14 +224,9 @@ header{
         font-weight: 100;
     }
     &__btn{
-        display: block;
-        width: fit-content;
-        color: white;
-        background: linear-gradient($secondary, $primary);
-        border-radius: 30px;
+        @include gradientBtn;
         padding: 17px 22px;
         margin: 30px auto;
-        box-shadow: 3px 5px 10px rgb(173, 173, 173);
     }
 }
 
@@ -254,7 +259,6 @@ a.site-hook__btn:hover, a.menu__btn:hover{
             text-align: center;  
             span{
                 font-size: 0.8em;
-                vertical-align: middle;
             }
         }
         i{
@@ -489,14 +493,9 @@ footer{
             }
         }
         &__btn{
-            display: block;
-            width: fit-content;
-            color: white;
-            background: linear-gradient($secondary, $primary);
-            border-radius: 30px;
+            @include gradientBtn;
             margin: 20px auto;
             padding: 15px 50px;
-            box-shadow: 3px 5px 10px rgb(173, 173, 173);
             opacity: 0;
             animation: 1s linear appearGradually forwards;
             animation-delay: 3500ms;

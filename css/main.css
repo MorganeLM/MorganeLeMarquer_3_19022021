@@ -337,10 +337,10 @@ header {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
-  padding: 17px 22px;
-  margin: 30px auto;
   -webkit-box-shadow: 3px 5px 10px #adadad;
           box-shadow: 3px 5px 10px #adadad;
+  padding: 17px 22px;
+  margin: 30px auto;
 }
 
 a.site-hook__btn:hover, a.menu__btn:hover {
@@ -381,7 +381,6 @@ a.site-hook__btn:hover, a.menu__btn:hover {
 
 .working__step__number span {
   font-size: 0.8em;
-  vertical-align: middle;
 }
 
 .working__step i {
@@ -691,10 +690,10 @@ footer p i {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
-  margin: 20px auto;
-  padding: 15px 50px;
   -webkit-box-shadow: 3px 5px 10px #adadad;
           box-shadow: 3px 5px 10px #adadad;
+  margin: 20px auto;
+  padding: 15px 50px;
   opacity: 0;
   -webkit-animation: 1s linear appearGradually forwards;
           animation: 1s linear appearGradually forwards;
