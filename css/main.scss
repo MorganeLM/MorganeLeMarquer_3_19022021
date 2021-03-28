@@ -25,7 +25,7 @@
 /*  RESPONSIVE COMPUTER >1050px */
 
 /* ---------------------------------------- */
-/* == COLORS MIXINS & ANIMATIONs                      */
+/* == COLORS MIXINS & ANIMATIONs           */
 /*--------------------------------------- */
 @import "_variables_and_mixins.scss";
 @import "_animations.scss";
@@ -77,35 +77,44 @@ img{
     animation: 3s linear spinnerBg forwards;
     &__bloc{
         position: absolute;
-        width: fit-content;
         left: 50%;
-        top: 40%;
+        top: 48%;
         transform: translateX(-50%);
         display: flex;
-        background-image: url('/images/animations/plate.png');
         &__dot{
             background: linear-gradient($primary, $secondary);
             opacity: 0.2;
-            width: 12px;
-            height: 12px;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
             &.first-dot{
                 margin-right: 10px;
                 animation: 1000ms linear spinnerRotation infinite;
-                animation: 1800ms linear spinnerBlink infinite;
+                animation: 1500ms linear spinnerBlink infinite;
             }
             &.second-dot{
                 margin: 0;
                 animation: 3s linear spinnerRotation infinite;
-                animation: 1800ms linear spinnerBlink 600ms infinite;
+                animation: 1500ms linear spinnerBlink 500ms infinite;
             }
             &.third-dot{
                 margin-left: 10px;
                 animation: 3s linear spinnerRotation infinite;
-                animation: 1800ms linear spinnerBlink 1200ms infinite;
+                animation: 1500ms linear spinnerBlink 1000ms infinite;
             }
         } 
     }
+    // &__img{
+    //     position: absolute;
+    //     width: 100px;
+    //     left: 50%;
+    //     top: 40%;
+    //     transform: translateX(-50%);
+    //     img{
+    //         width: 100%;
+    //         animation: 1500ms linear movingPlate infinite;
+    //     }
+    // }
 }
 
 // == Header
