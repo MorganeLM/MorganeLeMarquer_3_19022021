@@ -1,15 +1,4 @@
-@keyframes appearGradually { 
-    from { 
-        position: relative;
-        opacity: 0; 
-    } 
-    to { 
-        position: relative;
-        opacity: 1; 
-    }  
-}
-
-@keyframes spinnerBg{ 
+@keyframes loaderBackground{ 
     0% { 
         opacity: 1;
         height: 100vh;
@@ -32,43 +21,27 @@
     }  
 }
 
-@keyframes spinnerRotation{ 
-    0% { 
-        transform: rotate(0deg);
-    } 
-    25% { 
-        transform: rotate(90deg);
-    }  
-    50% { 
-        transform: rotate(180deg);
-    }  
-    75% { 
-        transform: rotate(270deg);
-    }  
-    100% { 
-        transform: rotate(360deg);
-    }  
+@keyframes movingX {
+    0% {
+        transform: translate(-80px, 0);
+    }
+    100% {
+        transform: translate(80px, 0)
+    }
 }
 
-@keyframes spinnerBlink{ 
-    0% { 
-        opacity: 0.2;
-    } 
-    40% { 
-        opacity: 0.4;
-    } 
-    50% { 
-        opacity: 1;
-    } 
-    90% { 
-        opacity: 0.4;
-    }   
-    100% { 
-        opacity: 0.2;
-    }  
+@keyframes movingY {
+    25% {
+        transform: translate(0, -40px);
+    }
+    0%, 50%, 100% {
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(0, 40px);
+    }
 }
-  
-  
+
 @keyframes movingPlate {
     0%, 50%, 100% {
     transform: rotate(0deg);
@@ -80,6 +53,29 @@
     transform: rotate(-10deg);
     }
 }
+
+@keyframes appearGradually { 
+    from { 
+        position: relative;
+        opacity: 0; 
+    } 
+    to { 
+        position: relative;
+        opacity: 1; 
+    }  
+}
+  
+
+// Délais spécifiques à chaque item pour l'animation "movingX" et "movingY"
+.loader__wrapper:nth-of-type(2),
+.loader__wrapper:nth-of-type(2) > div {
+    animation-delay: 0.1s;
+}
+.loader__wrapper:nth-of-type(3),
+.loader__wrapper:nth-of-type(3) > div {
+    animation-delay: 0.2s;
+}
+
 // Délais spécifiques à chaque item pour l'animation "appearGradually"
 #entrees{
     animation-delay: 500ms;
