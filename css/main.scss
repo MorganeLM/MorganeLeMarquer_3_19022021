@@ -330,7 +330,7 @@ a.site-hook__btn:hover, a.menu__btn:hover{
                 text-transform: uppercase;
                 position: relative;
                 opacity: 0;
-                animation: 1s ease-in appearGradually forwards;
+                animation: 1s linear appearGradually forwards;
                 &::after{
                     content: "";
                     position: absolute;
